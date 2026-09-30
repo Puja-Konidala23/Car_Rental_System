@@ -1,0 +1,152 @@
+.add-car-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f7fb;
+}
+
+.add-car-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.add-car-title {
+  margin: 0 0 30px;
+  font-size: 32px;
+  color: #1f2937;
+  text-align: center;
+}
+
+.add-car-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.add-car-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-car-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.add-car-field label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.add-car-field input,
+.add-car-field textarea,
+.add-car-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  background: #ffffff;
+  color: #111827;
+  transition: 0.2s ease;
+}
+
+.add-car-field input:focus,
+.add-car-field textarea:focus,
+.add-car-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.add-car-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.add-car-field input[type="file"] {
+  padding: 11px;
+  cursor: pointer;
+  background: #f8fafc;
+}
+
+.add-car-field input[type="file"]::file-selector-button {
+  padding: 8px 14px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.add-car-button {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 11px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-car-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.add-car-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.add-car-message {
+  margin-top: 20px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .add-car-page {
+    padding: 20px 12px;
+  }
+
+  .add-car-container {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .add-car-title {
+    font-size: 26px;
+  }
+
+  .add-car-form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-car-field.full-width {
+    grid-column: auto;
+  }
+
+  .add-car-button {
+    grid-column: auto;
+    font-size: 16px;
+  }
+}

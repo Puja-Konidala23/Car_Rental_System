@@ -1,0 +1,270 @@
+.edit-car-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f7fb;
+}
+
+.edit-car-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.edit-car-title {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.edit-car-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.edit-car-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-car-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.edit-car-field label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.edit-car-field input,
+.edit-car-field textarea,
+.edit-car-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  background: #ffffff;
+  color: #111827;
+  transition: 0.2s ease;
+}
+
+.edit-car-field input:focus,
+.edit-car-field textarea:focus,
+.edit-car-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.edit-car-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.edit-availability-field {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.edit-availability-field input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.edit-availability-field label {
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+}
+
+.edit-images-section {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.edit-images-title {
+  margin: 0 0 18px;
+  font-size: 21px;
+  color: #1f2937;
+}
+
+.existing-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.existing-image-card {
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.existing-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 9px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.existing-image-card.marked-remove {
+  opacity: 0.5;
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.image-remove-button {
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.image-remove-button:hover {
+  background: #fee2e2;
+}
+
+.image-keep-button {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.image-keep-button:hover {
+  background: #d1fae5;
+}
+
+.new-images-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.new-images-input::file-selector-button {
+  padding: 8px 14px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.edit-car-button {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 11px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.edit-car-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.edit-car-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.edit-car-message {
+  margin-top: 20px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  text-align: center;
+}
+
+.edit-car-loading,
+.edit-car-access-denied {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+  color: #374151;
+}
+
+@media (max-width: 750px) {
+  .edit-car-form {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-car-field.full-width,
+  .edit-availability-field,
+  .edit-images-section,
+  .edit-car-button {
+    grid-column: auto;
+  }
+
+  .existing-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .edit-car-page {
+    padding: 20px 12px;
+  }
+
+  .edit-car-container {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .edit-car-title {
+    font-size: 27px;
+  }
+
+  .existing-images {
+    grid-template-columns: 1fr;
+  }
+
+  .existing-image {
+    height: 200px;
+  }
+
+  .edit-car-button {
+    font-size: 16px;
+  }
+}

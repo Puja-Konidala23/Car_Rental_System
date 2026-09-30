@@ -1,0 +1,271 @@
+.admin-dashboard-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f7fb;
+}
+
+.admin-dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-dashboard-title {
+  margin: 0 0 25px;
+  font-size: 34px;
+  color: #1f2937;
+}
+
+.admin-dashboard-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.admin-action-link {
+  text-decoration: none;
+}
+
+.admin-action-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-action-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.admin-dashboard-message {
+  margin-bottom: 25px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+}
+
+.admin-section-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 30px 0;
+}
+
+.admin-section-title {
+  margin: 0 0 20px;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+/* Statistics */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.dashboard-stat-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-stat-card h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.dashboard-stat-card p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.dashboard-stat-card.revenue p {
+  color: #16a34a;
+}
+
+/* Cars */
+
+.admin-cars-count {
+  margin-bottom: 20px;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.admin-cars-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.admin-car-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+}
+
+.admin-car-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.admin-car-content {
+  padding: 20px;
+}
+
+.admin-car-name {
+  margin: 0 0 7px;
+  font-size: 21px;
+  color: #111827;
+}
+
+.admin-car-model {
+  margin: 0 0 12px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.admin-car-price {
+  margin: 0 0 10px;
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admin-car-city {
+  margin: 0 0 12px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.admin-car-features {
+  margin: 0 0 18px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.admin-car-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-car-link {
+  padding: 9px 13px;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-car-link:hover {
+  background: #dbeafe;
+}
+
+.admin-car-edit {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.admin-car-edit:hover {
+  background: #e5e7eb;
+}
+
+.admin-car-delete {
+  padding: 9px 13px;
+  border: none;
+  border-radius: 7px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-car-delete:hover {
+  background: #fee2e2;
+}
+
+.admin-no-cars {
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.admin-dashboard-loading,
+.admin-access-denied {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+  color: #374151;
+}
+
+@media (max-width: 950px) {
+  .admin-cars-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard-page {
+    padding: 20px 12px;
+  }
+
+  .admin-dashboard-title {
+    font-size: 27px;
+  }
+
+  .admin-dashboard-actions {
+    flex-direction: column;
+  }
+
+  .admin-action-link,
+  .admin-action-button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-cars-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-car-image {
+    height: 220px;
+  }
+}

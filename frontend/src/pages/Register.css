@@ -1,0 +1,132 @@
+.register-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.register-title {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-field label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.register-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.register-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.register-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.register-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.register-message {
+  margin-top: 20px;
+  padding: 13px 15px;
+  border-radius: 10px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  text-align: center;
+}
+
+.register-login-text {
+  margin-top: 22px;
+  text-align: center;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+.register-login-link {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-login-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .register-page {
+    padding: 20px 12px;
+  }
+
+  .register-container {
+    margin-top: 10px;
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .register-title {
+    font-size: 25px;
+  }
+
+  .register-button {
+    font-size: 15px;
+  }
+}
