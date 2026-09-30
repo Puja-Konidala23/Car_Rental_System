@@ -20,7 +20,10 @@ connectDB();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://car-rental-system-flame-nine.vercel.app",
+    ],
   }),
 );
 
